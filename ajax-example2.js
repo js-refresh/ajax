@@ -56,10 +56,10 @@ dogButton.addEventListener("click", () => {
 select.addEventListener('change', () => {
         console.log(select.value)
 
-        // fetch (`https://dog.ceo/api/breed/${select.value}/images/random`)
-        //     .then(res => res.json())
-        //     .then(data => {
-        //         replaceImage(data.message)
-        //     })
+        fetch (`https://dog.ceo/api/breed/${select.value}/images/random`)
+            .then(res => res.json())
+            .then(data => {
+                replaceImage(data.message)
+            })
     })
 })
